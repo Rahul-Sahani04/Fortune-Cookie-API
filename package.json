@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon index.js"
   },
   "author": "Rahul Sahani",
   "license": "ISC",
@@ -22,5 +22,10 @@
   "devDependencies": {
     "dotenv": "^16.3.1",
     "dotenv-expand": "^10.0.0"
+  },
+  "vercel": {
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/api/$1" }
+    ]
   }
 }
