@@ -1,3 +1,5 @@
+// ! Localhost
+
 // const express = require('express');
 // const search = require('./routes/getRandom');
 // const users = require('./routes/ShowData');
@@ -20,12 +22,10 @@
 //     console.log(`App running on port ${port}.`)
 // })
 
-
+// ! Vercel
+// app.js
 const express = require('express');
-const search = require('./routes/getRandom');
-const users = require('./routes/ShowData');
-const add = require('./routes/add');
-const deleteUser = require('./routes/delete');
+const apiHandler = require('./api/apiHandler');
 
 const app = express();
 app.use(express.json());
@@ -36,9 +36,7 @@ app.get('/', (request, response) => {
   });
 });
 
-app.get('/cookie', users.ShowData);
-app.get('/cookie/random', search.getRandom);
-app.post('/cookie/add', add.addCookie);
-app.delete('/cookie/:id', deleteUser.deleteCookie);
+// Use the API routes defined in apiHandler
+app.use(apiHandler);
 
-module.exports = {app};
+module.exports = { app };

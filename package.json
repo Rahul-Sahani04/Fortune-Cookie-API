@@ -25,7 +25,7 @@
   },
   "vercel": {
     "rewrites": [
-      { "source": "/(.*)", "destination": "/api/$1" }
+      { "source": "/(.*)", "destination": "/cookie/$1" }
     ]
   }
 }

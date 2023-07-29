@@ -1,37 +1,12 @@
 {
     "version": 2,
     "builds": [
-      {
-        "src": "server.js",
-        "use": "@vercel/node"
-      }
+        {
+            "src": "server.js",
+            "use": "@vercel/node"
+        }
     ],
-    "routes": [
-      {
-        "src": "/cookie/random",
-        "dest": "/server.js"
-      },
-      {
-        "src": "/cookie/add",
-        "dest": "/server.js"
-      },
-      {
-        "src": "/cookie/:id",
-        "dest": "/server.js"
-      },
-      {
-        "src": "/cookie",
-        "dest": "/server.js"
-      },
-      {
-        "src": "/cookie/:id",
-        "methods": ["DELETE"],
-        "dest": "/server.js"
-      },
-      {
-        "src": "/",
-        "dest": "/server.js"
+    "env": {
+        "connectionString": "postgres://default:Wd5aIoyO7RPE@ep-fragrant-cell-276327.ap-southeast-1.postgres.vercel-storage.com:5432/user_details"
       }
-    ]
-  }
-  
+}

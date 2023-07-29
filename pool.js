@@ -1,7 +1,10 @@
 // ! VERCEL Connection
 const { Client } = require('pg');
 
-const connectionString = "postgres://default:Wd5aIoyO7RPE@ep-fragrant-cell-276327.ap-southeast-1.postgres.vercel-storage.com:5432/user_details";
+// app.js
+require('dotenv').config();
+
+const {connectionString} = process.env;
 
 const pool = new Client({
   connectionString: connectionString,
