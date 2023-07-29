@@ -1,19 +1,16 @@
 // api/apiHandler.js
 const express = require('express');
+const router = express.Router(); // Use Express Router
+
 const { getRandom } = require('../routes/getRandom');
 const { ShowData } = require('../routes/ShowData');
 const { addCookie } = require('../routes/add');
 const { deleteCookie } = require('../routes/delete');
 
-const app = express();
-app.get('/', (request, response) => {
-    response.json({
-      info: 'Node.js, Express, and Postgres API',
-    });
-  });
-app.get('/api/cookie/random', getRandom);
-app.get('/api/cookie', ShowData);
-app.post('/api/cookie/add', addCookie);
-app.delete('/api/cookie/:id', deleteCookie);
+// Define the routes using the router
+router.get('/api/cookie/random', getRandom);
+router.get('/api/cookie', ShowData);
+router.post('/api/cookie/add', addCookie);
+router.delete('/api/cookie/:id', deleteCookie);
 
-module.exports = {app};
+module.exports = {router};

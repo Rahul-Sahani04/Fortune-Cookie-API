@@ -1,16 +1,11 @@
-// ! VERCEL Connection
+// pool.js
 const { Client } = require('pg');
 
-// app.js
-require('dotenv').config();
-
-const {connectionString} = process.env;
-
 const pool = new Client({
-  connectionString: connectionString,
+  connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false,
-  }
+  },
 });
 
 pool.connect()
