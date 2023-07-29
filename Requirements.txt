@@ -1,0 +1,23 @@
+1. POST
+    users/add
+{
+  "firstName":"Rahul",
+  "lastName":"Sahani"
+}
+
+2. GET users/showAll
+Show All the users in the Database
+
+3. GET users/search?firstName=rahul || id || lastName
+Show All the users in the Database with  the matching firstName or lastName or id 
+
+4. DELETE users/delete?firstName=rahul || id 
+Delete  the users in the Database with the  matching firstName or lastName or id 
+
+5. Update users/update?id || firstName
+Update  the users in the Database with the  matching firstName or lastName or id 
+
+{
+  "firstName":"Rahul",
+  "lastName":"Sahani"
+}
