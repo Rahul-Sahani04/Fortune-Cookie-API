@@ -6,7 +6,11 @@ const { addCookie } = require('../routes/add');
 const { deleteCookie } = require('../routes/delete');
 
 const app = express();
-
+app.get('/', (request, response) => {
+    response.json({
+      info: 'Node.js, Express, and Postgres API',
+    });
+  });
 app.get('/api/cookie/random', getRandom);
 app.get('/api/cookie', ShowData);
 app.post('/api/cookie/add', addCookie);
