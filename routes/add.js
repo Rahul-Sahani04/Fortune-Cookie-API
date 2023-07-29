@@ -1,6 +1,6 @@
 const { pool } = require('../pool');
 
-const addUsers = (request, response) => {
+const addCookie = (request, response) => {
     // const firstName = request.query.firstName;
     // const lastName = request.query.lastName;
     // const email = request.query.email;
@@ -20,5 +20,5 @@ const addUsers = (request, response) => {
 };
 
 module.exports = {
-    addUsers,
+    addCookie,
 };

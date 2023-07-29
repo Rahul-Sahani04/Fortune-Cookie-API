@@ -1,6 +1,6 @@
 const { pool } = require('../pool');
 
-const getUsers = (request, response) => {
+const ShowData = (request, response) => {
     // pool.connect(); // <---- Use in VERCEL
     pool.query('select * from fortune_messages', (error, results) => {
         if (error) {
@@ -11,5 +11,5 @@ const getUsers = (request, response) => {
 }
 
 module.exports = {
-    getUsers,
+    ShowData,
 }

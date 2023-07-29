@@ -1,6 +1,6 @@
 const { pool } = require('../pool');
 
-const deleteUser = (request, response) => {
+const deleteCookie = (request, response) => {
     const id = request.params.id;
 
     if (!id) {
@@ -19,5 +19,5 @@ const deleteUser = (request, response) => {
 };
 
 module.exports = {
-    deleteUser,
+    deleteCookie,
 };
