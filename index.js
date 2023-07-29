@@ -2,8 +2,7 @@ const express = require('express');
 const search = require('./routes/getRandom');
 const users = require('./routes/ShowData');
 const add = require('./routes/add')
-const deleteUser = require('./routes/delete')
-// const update = require('./routes/update')
+const deleteCookie = require('./routes/delete')
 
 port = 8000
 const app = express()
@@ -13,11 +12,10 @@ app.get('/', (request, response) => {
         info: 'Node.js, Express, and Postgres API'
     })
 })
-app.get('/cookie', users.getUsers)
-app.get('/cookie/random', search.searchUser);
-app.post('/cookie/add', add.addUsers)
-// app.post('/users/:id', update.updateUser)
-app.delete('/cookie/:id', deleteUser.deleteUser)
+app.get('/cookie', users.ShowData)
+app.get('/cookie/random', search.getRandom);
+app.post('/cookie/add', add.addCookie)
+app.delete('/cookie/:id', deleteCookie.deleteCookie)
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)
 })
