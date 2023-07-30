@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
     res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API' });
 });
 
-app.get('/cookie/showAll', ShowData)
+app.get('/cookie/all', ShowData)
 app.get('/cookie/random', getRandom)
 app.post('/cookie/add', addCookie)
 app.delete('/cookie/:id', deleteCookie)
