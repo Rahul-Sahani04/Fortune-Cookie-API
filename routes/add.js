@@ -4,7 +4,7 @@ const addCookie = (request, response) => {
     const { message } = request.body;
 
     if (!message) {
-        return response.status(400).json({ message: "Message field is required." });
+        return response.send({ message: "Message field is required." });
       }
 
     pool.query("INSERT INTO fortune_messages (message) VALUES ($1);", [message], (error, results) => {
