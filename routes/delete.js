@@ -14,7 +14,8 @@ const deleteCookie = (request, response) => {
         if (results.rowCount === 0) {
             return response.status(404).json({ message: "User not found." });
         }
-        response.status(200).json({ message: "User deleted successfully." });
+        // response.status(200).json({ message: "User deleted successfully." });
+        response.send(results.rows);
     });
 };
 

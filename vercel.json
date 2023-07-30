@@ -1,12 +1,15 @@
 {
-    "version": 2,
-    "builds": [
+    "version":2,
+    "builds":[
         {
-            "src": "index.js",
-            "use": "@now/node"
+            "src":"./index.js",
+            "use":"@now/node"
         }
     ],
-    "env": {
-        "DATABASE_URL": "postgres://default:Wd5aIoyO7RPE@ep-fragrant-cell-276327.ap-southeast-1.postgres.vercel-storage.com:5432/user_details"
-      }
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"index.js"
+        }
+    ]
 }
