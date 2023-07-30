@@ -4,10 +4,10 @@ const deleteCookie = (request, response) => {
     const id = request.params.id;
 
     if (!id) {
-        return response.status(400).json({ message: "User ID is required for deletion." });
+        return response.status(400).json({ message: "Cookie ID is required for deletion." });
     }
 
-    pool.query('DELETE FROM info WHERE ID = $1', [id], (error, results) => {
+    pool.query('DELETE FROM fortune_messages WHERE ID = $1', [id], (error, results) => {
         if (error) {
             throw error;
         }

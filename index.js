@@ -1,16 +1,28 @@
 const express = require('express');
-const apiHandler = require('./api/apiHandler');
+const {addCookie} = require('./routes/add')
+const {deleteCookie} = require('./routes/delete')
+const {getRandom} = require('./routes/getRandom')
+const {ShowData} = require('./routes/ShowData')
 
 const app = express();
-app.use(express.json());
+const cors = require("cors")
+app.use(cors())
+require("dotenv").config();
+const port = process.env.PORT || 8000
 
-app.get('/', (request, response) => {
-  response.json({
-    info: 'Node.js, Express, and Postgres API',
-  });
+
+app.get("/", (req, res) => {
+    res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API' });
 });
 
-// Use the API routes defined in apiHandler
-app.use(apiHandler);
+app.get('/cookie', ShowData)
+app.get('/cookie/random', getRandom)
+app.post('/cookie/add', addCookie)
+app.delete('/cookie/:id', deleteCookie)
+
+
+app.listen(port, () => {
+  console.log(`Server is running on port: ${port}`);
+});
 
 module.exports = { app };
