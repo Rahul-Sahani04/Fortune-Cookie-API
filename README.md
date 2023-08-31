@@ -21,7 +21,7 @@ To get started with Fortune Cookie API, follow these steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Rahul-Sahani04/Fortune_Cookie_FastAPI.git
+   git clone https://github.com/Rahul-Sahani04/Fortune-Cookie-API.git
    cd your-project
    ```
 
