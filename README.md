@@ -13,7 +13,7 @@
 
 ## Introduction
 
-Welcome to FortuneAPI, an engaging and efficient API built using NodeJS. Designed to bring a touch of surprise to your applications, FortuneAPI lets you access a collection of random fortune cookie messages. Whether you're looking to add a fun element to your projects or seeking a delightful way to interact with users, FortuneAPI has you covered. This project showcases the power of FastAPI and demonstrates how simple it can be to integrate an interactive and entertaining API into your applications.
+Welcome to FortuneAPI, an engaging and efficient API built using NodeJS. Designed to bring a touch of surprise to your applications, FortuneAPI lets you access a collection of random fortune cookie messages. Whether you're looking to add a fun element to your projects or seeking a delightful way to interact with users, FortuneAPI has you covered. This project showcases the power of NodeJS and demonstrates how simple it can be to integrate an interactive and entertaining API into your applications.
 
 ## Installation
 
