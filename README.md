@@ -20,15 +20,15 @@ Welcome to FortuneAPI, an engaging and efficient API built using NodeJS. Designe
 To get started with Fortune Cookie API, follow these steps:
 
 1. Clone the repository:
-   ```sh
+```sh
    git clone https://github.com/Rahul-Sahani04/Fortune-Cookie-API.git
    cd your-project
-   ```
+```
 
 2. Install dependencies:
-  ```sh
+```sh
   npm install
-  ```
+```
 
 **Part 5: Usage**
 
